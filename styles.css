@@ -261,6 +261,80 @@ mark { background: #ffe9a8; padding: 0 3px; border-radius: 3px; }
   margin-top: 10px !important;
 }
 
+/* Wall Go promo (notify.html) — scoped palette for the next-game signup page.
+   Layered on top of .legal / .contact-box / .formkit-* above via the .wallgo-promo
+   ancestor class (added only to notify.html's <main>), so nothing here can affect
+   privacy.html, terms.html, support.html, or index.html, which reuse those same
+   base classes. Wall Go palette lifted from mobile/theme/tokens.ts. */
+.wallgo-promo {
+  --wg-forest: #285943;
+  --wg-forest-dark: #1a3c2c;
+  --wg-sage: #7fa68a;
+  --wg-clay: #c96f4a;
+  --wg-gold: #d6a84f;
+  --wg-gold-dark: #b58c39;
+  --wg-gold-ink: #3d2e08;
+  --wg-cream: #f7f3e8;
+  --wg-surface-alt: #efe8d6;
+  --wg-ink: #26332d;
+}
+
+.wallgo-promo .eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--wg-gold-ink);
+  background: rgba(214, 168, 79, .18);
+  border: 1px solid rgba(214, 168, 79, .45);
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin: 0 0 14px;
+}
+
+.wallgo-promo h1 {
+  color: var(--wg-forest);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+.wallgo-promo .subtitle {
+  color: var(--wg-ink);
+  font-style: normal;
+}
+
+.wallgo-promo .contact-box {
+  background: var(--wg-cream);
+  border-color: var(--wg-surface-alt);
+  box-shadow: 4px 4px 0 var(--wg-surface-alt);
+}
+
+.wallgo-promo .formkit-header { color: var(--wg-forest) !important; }
+.wallgo-promo .formkit-subheader { color: var(--wg-ink) !important; }
+.wallgo-promo .formkit-input:focus { border-color: var(--wg-forest) !important; }
+.wallgo-promo .formkit-submit {
+  background: var(--wg-gold) !important;
+  color: var(--wg-gold-ink) !important;
+  box-shadow: 4px 4px 0 var(--wg-gold-dark) !important;
+}
+.wallgo-promo .formkit-submit:hover {
+  background: var(--wg-gold-dark) !important;
+  color: #fff !important;
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 6px 6px 0 var(--wg-gold-dark) !important;
+}
+.wallgo-promo .formkit-alert-success {
+  background: rgba(127, 166, 138, .18) !important;
+  color: var(--wg-forest) !important;
+  border-color: var(--wg-forest) !important;
+}
+.wallgo-promo .formkit-alert-error {
+  background: rgba(201, 111, 74, .12) !important;
+  color: var(--wg-clay) !important;
+  border-color: var(--wg-clay) !important;
+}
+
 /* Footer */
 .site-footer {
   background: var(--green-800); color: #d9e4dc; padding: 34px 0; text-align: center; margin-top: 40px;
